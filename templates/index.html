@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Handbook Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Handbook Assistant</h1>
+        <p>Ask questions about employee policies.</p>
+
+        <form id="question-form">
+            <input
+                type="text"
+                id="question"
+                placeholder="e.g. How many annual leave days do I get?"
+                required
+            >
+            <button type="submit">Ask Question</button>
+        </form>
+
+        <p id="status"></p>
+
+        <section id="answer-section" hidden>
+            <h2>Answer</h2>
+            <p id="answer"></p>
+
+            <h2>Sources</h2>
+            <div id="sources"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
